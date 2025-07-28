@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snack Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff3e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #bf360c;
+      margin-top: 30px;
+      font-weight: 700;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      text-align: center;
+      max-width: 250px;
+    }
+
+    .item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .item img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 17px;
+      color: #bf360c;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Snack Gallery 🍿🍪🍟</h1>
+
+  <div class="gallery">
+    <div class="item">
+      <img src="21.jpg" alt="Potato Chips" />
+      <p class="caption">Potato Chips</p>
+    </div>
+    <div class="item">
+      <img src="22.jpg" alt="Chocolate Cookies" />
+      <p class="caption">Chocolate Cookies</p>
+    </div>
+    <div class="item">
+      <img src="23.jpg" alt="French Fries" />
+      <p class="caption">French Fries</p>
+    </div>
+    <div class="item">
+      <img src="24.jpg" alt="Popcorn" />
+      <p class="caption">Popcorn</p>
+    </div>
+    <div class="item">
+      <img src="25.jpg" alt="Nachos" />
+      <p class="caption">Nachos</p>
+    </div>
+    <div class="item">
+      <img src="26.jpg" alt="Pretzels" />
+      <p class="caption">Pretzels</p>
+    </div>
+    <div class="item">
+      <img src="27.jpg" alt="Granola Bars" />
+      <p class="caption">Granola Bars</p>
+    </div>
+    <div class="item">
+      <img src="28.jpg" alt="Fruit Salad" />
+      <p class="caption">Fruit Salad</p>
+    </div>
+    <div class="item">
+      <img src="29.jpg" alt="Cheese Sticks" />
+      <p class="caption">Cheese Sticks</p>
+    </div>
+  </div>
+
+</body>
+</html>

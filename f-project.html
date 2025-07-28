@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hotel Paradise</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2em;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 30px;
+    }
+
+    .about, .rooms, .gallery, .booking, .contact, .order, .billing {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .room-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .room {
+      width: 32%;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .room img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .gallery-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery-images img {
+      width: 30%;
+      border-radius: 10px;
+    }
+
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    form button {
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #001f4d;
+    }
+
+    .billing {
+      background: #fff;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+
+    .error-message {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+    }
+
+    .print-btn {
+      margin-top: 15px;
+      background-color: #28a745;
+    }
+
+    .print-btn:hover {
+      background-color: #1e7e34;
+    }
+
+    .total-output {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Hotel Paradise</h1>
+    <p>A place of peace, beauty & happiness 🌴🌞🌊</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Booking</a>
+      <a href="#order">Order</a>
+      <a href="#billing">Billing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Hotel Paradise</h1>
+      <p>Luxury and Comfort Awaits You</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Hotel Paradise is a luxurious stay destination located in the heart of the city. With a legacy of hospitality and world-class service, we ensure our guests have a comfortable and memorable experience. Our hotel features elegant rooms, gourmet dining, and modern amenities.</p>
+  </section>
+
+  <!-- ROOMS -->
+  <section id="rooms" class="rooms">
+    <h2>Our Rooms</h2>
+    <div class="room-cards">
+      <div class="room">
+        <img src="2std.jpg" alt="Deluxe Room">
+        <h3>Deluxe Room</h3>
+        <p>Price: ₹5000/night</p>
+      </div>
+      <div class="room">
+        <img src="1.jpg" alt="Suite Room">
+        <h3>Suite Room</h3>
+        <p>Price: ₹7500/night</p>
+      </div>
+      <div class="room">
+        <img src="3std.jpg" alt="Standard Room">
+        <h3>Standard Room</h3>
+        <p>Price: ₹3000/night</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-images">
+      <img src="1hv.jpg" alt="Hotel View">
+      <img src="2std.jpg" alt="Room">
+      <img src="2res.jpg" alt="Restaurant">
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking">
+    <h2>Book a Room</h2>
+    <form onsubmit="event.preventDefault(); calculateBooking();">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <select id="roomType" required>
+        <option value="">Select Room Type</option>
+        <option value="5000">Deluxe - ₹5000/night</option>
+        <option value="7500">Suite - ₹7500/night</option>
+        <option value="3000">Standard - ₹3000/night</option>
+      </select>
+      <label>Check-in Date:</label>
+      <input type="date" id="checkin" required>
+      <label>Check-out Date:</label>
+      <input type="date" id="checkout" required>
+      <button type="submit">Calculate Booking Charges</button>
+      <div class="total-output" id="bookingOutput"></div>
+    </form>
+  </section>
+
+  <!-- ORDER -->
+  <section id="order" class="order">
+    <h2>Room Service Order</h2>
+    <form onsubmit="event.preventDefault(); calculateFoodOrder();">
+      <input type="text" placeholder="Your Room Number" required>
+        <select id="category" onchange="goToPage(this)">
+    <option value="">--Select--</option>
+    <option value="sweet.html">Sweet</option>
+    <option value="snack.html">Snacks</option>
+    <option value="cold-drink.html">Drinks</option>
+  </select>
+      <input type="number" id="quantity" placeholder="Quantity" required>
+      <textarea placeholder="Additional Instructions" rows="3"></textarea>
+      <button type="submit">Calculate Food Total</button>
+      <div class="total-output" id="foodOutput"></div>
+    </form>
+  </section>
+
+  <!-- BILLING -->
+  <section id="billing" class="billing">
+    <h2>Billing System</h2>
+    <form id="billingForm" onsubmit="calculateBill(); return false;">
+      <input type="number" id="roomCharge" placeholder="Room Charges (₹)" required>
+      <input type="number" id="foodCharge" placeholder="Food Charges (₹)" required>
+      <input type="number" id="tax" placeholder="Tax (₹)" required>
+      <button type="submit">Calculate Total Bill</button>
+      <input type="text" id="totalAmount" placeholder="Total Amount (₹)" readonly style="margin-top:10px; background: #e9e9e9;">
+      <div class="error-message" id="billingError"></div>
+    </form>
+    <button class="print-btn" onclick="window.print()">🖨 Print Receipt</button>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">
+      📍 123 Paradise Street, Mumbai, India <br>
+      📞 9876543210 <br>
+      ✉ contact@hotelparadise.com
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Hotel Paradise. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function calculateBooking() {
+      const rate = parseInt(document.getElementById("roomType").value);
+      const checkin = new Date(document.getElementById("checkin").value);
+      const checkout = new Date(document.getElementById("checkout").value);
+      const days = (checkout - checkin) / (1000 * 3600 * 24);
+
+      if (isNaN(rate) || isNaN(days) || days <= 0) {
+        alert("❌ Please enter valid dates and room type.");
+        return;
+      }
+
+      const total = rate * days;
+      document.getElementById("bookingOutput").innerText = `✅ Total Booking Charges: ₹${total} for ${days} night(s)`;
+    }
+
+    function calculateFoodOrder() {
+      const itemPrice = parseInt(document.getElementById("foodItem").value);
+      const qty = parseInt(document.getElementById("quantity").value);
+
+      if (isNaN(itemPrice) || isNaN(qty) || qty <= 0) {
+        alert("❌ Please enter valid food selection and quantity.");
+        return;
+      }
+
+      const total = itemPrice * qty;
+      document.getElementById("foodOutput").innerText = `✅ Total Food Charges: ₹${total}`;
+    }
+
+    function calculateBill() {
+      const room = parseFloat(document.getElementById("roomCharge").value);
+      const food = parseFloat(document.getElementById("foodCharge").value);
+      const tax = parseFloat(document.getElementById("tax").value);
+      const errorMsg = document.getElementById("billingError");
+      errorMsg.textContent = "";
+
+      if (isNaN(room) || room < 0 || isNaN(food) || food < 0 || isNaN(tax) || tax < 0) {
+        errorMsg.textContent = "❌ Please enter total charges correctly!";
+        document.getElementById("totalAmount").value = "";
+        return;
+      }
+
+      const total = room + food + tax;
+      document.getElementById("totalAmount").value = "₹" + total.toFixed(2);
+    }
+
+    
+  </script>
+
+  <script>
+    function goToPage(select) {
+      const page = select.value;
+      if (page) {
+        window.location.href = page;
+      }
+    }
+  </script>
+
+   <script>
+    function goToPage(select) {
+      const page = select.value;
+      if (page) {
+        window.location.href = page;
+      }
+    }
+  </script>
+ 
+
+</body>
+</html>
